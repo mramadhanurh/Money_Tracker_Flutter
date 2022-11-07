@@ -44,10 +44,13 @@ class _MainPageState extends State<MainPage> {
                       style: GoogleFonts.montserrat(fontSize: 20)),
                 )),
                 preferredSize: Size.fromHeight(100)),
-        floatingActionButton: FloatingActionButton(
-          onPressed: () {},
-          backgroundColor: Colors.green,
-          child: Icon(Icons.add),
+        floatingActionButton: Visibility(
+          visible: (currentIndex == 0) ? true : false,
+          child: FloatingActionButton(
+            onPressed: () {},
+            backgroundColor: Colors.green,
+            child: Icon(Icons.add),
+          ),
         ),
         body: _children[currentIndex],
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
